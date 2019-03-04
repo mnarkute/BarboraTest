@@ -16,7 +16,7 @@ public class BarboraTest {
 
 
     public BarboraTest() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Monika\\IdeaProjects/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "../chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         JavascriptExecutor executor = (JavascriptExecutor) driver;
