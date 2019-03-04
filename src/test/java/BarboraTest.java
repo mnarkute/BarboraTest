@@ -64,9 +64,9 @@ User searches for a random product from the pre-defined list (Apple, Chicken, Ch
         Assert.assertTrue(page.wasReservationMade());
     }
 
-//    @After
-//    public void teardown() {
-//        driver.close();
-//        driver.quit();
-//    }
+    @After
+    public void teardown() {
+        driver.close();
+        driver.quit();
+    }
 }
