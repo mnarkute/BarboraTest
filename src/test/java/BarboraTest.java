@@ -1,3 +1,4 @@
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,11 +28,10 @@ public class BarboraTest {
         page.openBarboraPage();
     }
 
-    /*Scenario 1:
-New user registers
-User searches for a random product from the pre-defined list (Apple, Chicken, Chips, Cola)
- */
-
+    /*
+    New user registers;
+    User searches for a random product from the pre-defined list (Apple, Chicken, Chips, Cola);
+     */
     @Test
     public void register() {
         page.openRegistrationForm();
@@ -48,11 +48,13 @@ User searches for a random product from the pre-defined list (Apple, Chicken, Ch
         Assert.assertTrue(page.isSearchResultsDisplayed());
     }
 
-    //    User adds beer to his cart.
-//    User selects a delivery time.
+    /*
+    User adds beer to his cart;
+    User selects a delivery time;
+    */
     @Test
     public void buySomeBeer() {
-        String email = "barboratestimonia@test.com";
+        String email = "barboratestimonia12@test.com";
         String password = "barboratest";
         String searchPhrase = "beer";
         page.login(email, password);
@@ -66,7 +68,6 @@ User searches for a random product from the pre-defined list (Apple, Chicken, Ch
 
     @After
     public void teardown() {
-        driver.close();
-        driver.quit();
+        page.quit();
     }
 }
