@@ -54,7 +54,7 @@ public class BarboraTest {
     */
     @Test
     public void buySomeBeer() {
-        String email = "barboratestimonia12@test.com";
+        String email = "barboratestimonia@test.com";
         String password = "barboratest";
         String searchPhrase = "beer";
         page.login(email, password);
